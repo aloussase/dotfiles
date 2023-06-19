@@ -1,4 +1,5 @@
 {
+    "coc.preferences.formatOnSave": true,
     "languageserver": {
         "haskell": {
             "command": "haskell-language-server-wrapper",

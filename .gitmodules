@@ -17,3 +17,6 @@
 [submodule "pack/bundle/start/nerdfont.vim"]
 	path = pack/bundle/start/nerdfont.vim
 	url = https://github.com/lambdalisue/nerdfont.vim
+[submodule "pack/bundle/start/vim-clap"]
+	path = pack/bundle/start/vim-clap
+	url = https://github.com/liuchengxu/vim-clap

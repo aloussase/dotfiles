@@ -11,3 +11,9 @@
 [submodule "pack/bundle/start/fern.vim"]
 	path = pack/bundle/start/fern.vim
 	url = https://github.com/lambdalisue/fern.vim
+[submodule "pack/bundle/start/fern-renderer-nerdfont.vim"]
+	path = pack/bundle/start/fern-renderer-nerdfont.vim
+	url = https://github.com/lambdalisue/fern-renderer-nerdfont.vim
+[submodule "pack/bundle/start/nerdfont.vim"]
+	path = pack/bundle/start/nerdfont.vim
+	url = https://github.com/lambdalisue/nerdfont.vim

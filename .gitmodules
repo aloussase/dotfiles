@@ -8,3 +8,6 @@
 [submodule "pack/bundle/start/lightline.vim"]
 	path = pack/bundle/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
+[submodule "pack/bundle/start/fern.vim"]
+	path = pack/bundle/start/fern.vim
+	url = https://github.com/lambdalisue/fern.vim

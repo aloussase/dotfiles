@@ -1,0 +1,40 @@
+set nocompatible
+syntax on 
+filetype plugin on
+filetype indent on
+
+set number
+set tabstop     =4
+set softtabstop =4
+set shiftwidth  =4
+set shiftround
+set expandtab
+
+colorscheme elflord
+set background=dark
+set termguicolors
+set cursorline
+
+set colorcolumn=80,100
+
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+
+set wildmenu
+set wildmode=longest,list,full
+
+set splitright
+set splitbelow 
+
+set list
+set listchars=eol:$
+
+set autoindent
+set smartindent
+
+set mouse=a
+set visualbell
+
+set hidden

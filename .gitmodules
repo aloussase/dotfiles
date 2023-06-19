@@ -1,0 +1,4 @@
+[submodule "pack/bundle/start/coc.vim"]
+	path = pack/bundle/start/coc.vim
+	url = https://github.com/neoclide/coc.nvim
+	branch = release

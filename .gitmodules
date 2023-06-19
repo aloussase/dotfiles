@@ -2,3 +2,9 @@
 	path = pack/bundle/start/coc.vim
 	url = https://github.com/neoclide/coc.nvim
 	branch = release
+[submodule "pack/bundle/start/carbon.vim"]
+	path = pack/bundle/start/carbon.vim
+	url = https://github.com/michaeldyrynda/carbon.vim
+[submodule "pack/bundle/start/lightline.vim"]
+	path = pack/bundle/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim

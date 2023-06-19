@@ -10,9 +10,10 @@ set shiftwidth  =4
 set shiftround
 set expandtab
 
-colorscheme elflord
+set laststatus=2
 set background=dark
 set termguicolors
+colorscheme carbon
 set cursorline
 
 set colorcolumn=80,100

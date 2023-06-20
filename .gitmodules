@@ -20,3 +20,15 @@
 [submodule "pack/bundle/start/vim-clap"]
 	path = pack/bundle/start/vim-clap
 	url = https://github.com/liuchengxu/vim-clap
+[submodule "pack/bundle/start/vim-indent-guides"]
+	path = pack/bundle/start/vim-indent-guides
+	url = https://github.com/preservim/vim-indent-guides
+[submodule "pack/bundle/start/vim-javascript"]
+	path = pack/bundle/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "pack/bundle/start/vim-endwise"]
+	path = pack/bundle/start/vim-endwise
+	url = https://github.com/tpope/vim-endwise
+[submodule "pack/bundle/start/vim-cpp-modern"]
+	path = pack/bundle/start/vim-cpp-modern
+	url = https://github.com/bfrg/vim-cpp-modern

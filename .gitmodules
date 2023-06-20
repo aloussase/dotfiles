@@ -32,3 +32,12 @@
 [submodule "pack/bundle/start/vim-cpp-modern"]
 	path = pack/bundle/start/vim-cpp-modern
 	url = https://github.com/bfrg/vim-cpp-modern
+[submodule "pack/bundle/start/vim-polyglot"]
+	path = pack/bundle/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule "pack/bundle/start/rainbow"]
+	path = pack/bundle/start/rainbow
+	url = https://github.com/luochen1990/rainbow
+[submodule "pack/bundle/start/haskell-vim"]
+	path = pack/bundle/start/haskell-vim
+	url = https://github.com/neovimhaskell/haskell-vim

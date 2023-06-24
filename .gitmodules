@@ -37,3 +37,6 @@
 [submodule "pack/bundle/start/haskell-vim"]
 	path = pack/bundle/start/haskell-vim
 	url = https://github.com/neovimhaskell/haskell-vim
+[submodule "pack/bundle/start/vim-autoformat"]
+	path = pack/bundle/start/vim-autoformat
+	url = https://github.com/vim-autoformat/vim-autoformat

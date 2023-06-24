@@ -1,7 +1,3 @@
-[submodule "pack/bundle/start/coc.vim"]
-	path = pack/bundle/start/coc.vim
-	url = https://github.com/neoclide/coc.nvim
-	branch = release
 [submodule "pack/bundle/start/carbon.vim"]
 	path = pack/bundle/start/carbon.vim
 	url = https://github.com/michaeldyrynda/carbon.vim

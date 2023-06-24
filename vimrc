@@ -1,5 +1,5 @@
 set nocompatible
-syntax on 
+syntax on
 filetype plugin on
 filetype indent on
 
@@ -39,3 +39,5 @@ set mouse=a
 set visualbell
 
 set hidden
+
+set guifont=Hasklug\ Nerd\ Font\ Mono\ 12

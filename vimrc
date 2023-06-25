@@ -3,6 +3,9 @@ syntax on
 filetype plugin on
 filetype indent on
 
+set noswapfile
+set nobackup
+
 set number
 set tabstop     =4
 set softtabstop =4

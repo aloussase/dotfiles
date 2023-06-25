@@ -43,3 +43,6 @@
 [submodule "pack/bundle/start/vim-stylish-haskell"]
 	path = pack/bundle/start/vim-stylish-haskell
 	url = https://github.com/nbouscal/vim-stylish-haskell
+[submodule "pack/bundle/start/vim-clang-format"]
+	path = pack/bundle/start/vim-clang-format
+	url = https://github.com/rhysd/vim-clang-format

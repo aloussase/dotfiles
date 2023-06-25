@@ -6,6 +6,8 @@ filetype indent on
 set noswapfile
 set nobackup
 
+set backspace=indent,eol,start
+
 set number
 set tabstop     =4
 set softtabstop =4

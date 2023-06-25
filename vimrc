@@ -27,7 +27,7 @@ set wildmenu
 set wildmode=longest,list,full
 
 set splitright
-set splitbelow 
+set splitbelow
 
 set list
 set listchars=eol:$
@@ -36,8 +36,10 @@ set autoindent
 set smartindent
 
 set mouse=a
-set visualbell
+" set visualbell
 
 set hidden
 
 set guifont=Hasklug\ Nerd\ Font\ Mono\ 12
+
+set nowrap

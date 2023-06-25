@@ -48,3 +48,4 @@ set hidden
 set guifont=Hasklug\ Nerd\ Font\ Mono\ 12
 
 set nowrap
+set viewdir=/tmp/view/

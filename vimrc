@@ -15,10 +15,10 @@ set shiftwidth  =4
 set shiftround
 set expandtab
 
-set laststatus=2
+set laststatus=0
 set background=dark
 set termguicolors
-colorscheme carbon
+colorscheme wildcharm
 set cursorline
 
 set colorcolumn=80,100

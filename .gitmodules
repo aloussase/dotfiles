@@ -34,9 +34,6 @@
 [submodule "pack/bundle/start/vim-stylish-haskell"]
 	path = pack/bundle/start/vim-stylish-haskell
 	url = https://github.com/nbouscal/vim-stylish-haskell
-[submodule "pack/bundle/start/vim-clang-format"]
-	path = pack/bundle/start/vim-clang-format
-	url = https://github.com/rhysd/vim-clang-format
 [submodule "pack/bundle/start/vim-highlightedyank"]
 	path = pack/bundle/start/vim-highlightedyank
 	url = https://github.com/machakann/vim-highlightedyank
@@ -46,3 +43,6 @@
 [submodule "pack/bundle/start/fzf"]
 	path = pack/bundle/start/fzf
 	url = https://github.com/junegunn/fzf
+[submodule "pack/bundle/start/ale"]
+	path = pack/bundle/start/ale
+	url = https://github.com/dense-analysis/ale

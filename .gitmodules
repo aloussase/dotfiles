@@ -31,9 +31,6 @@
 [submodule "pack/bundle/start/vim-cabalfmt"]
 	path = pack/bundle/start/vim-cabalfmt
 	url = https://github.com/sdiehl/vim-cabalfmt
-[submodule "pack/bundle/start/vim-stylish-haskell"]
-	path = pack/bundle/start/vim-stylish-haskell
-	url = https://github.com/nbouscal/vim-stylish-haskell
 [submodule "pack/bundle/start/vim-highlightedyank"]
 	path = pack/bundle/start/vim-highlightedyank
 	url = https://github.com/machakann/vim-highlightedyank

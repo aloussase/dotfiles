@@ -1,4 +1,26 @@
 {
-    "coc.preferences.formatOnSave": true,
-    "solargraph.formatting": true
+  "coc.preferences.formatOnSave": true,
+  "solargraph.formatting": true,
+  "languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml",
+        "hie.yaml"
+      ],
+      "filetypes": ["haskell", "lhaskell"],
+      "settings": {
+        "haskell": {
+          "formattingProvider": "stylish-haskell",
+          "plugin": {
+            "hlint": { "globalOn": true }
+          }
+        }
+      }
+    }
+  }
 }

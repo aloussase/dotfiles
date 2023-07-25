@@ -18,7 +18,7 @@ set expandtab
 set laststatus=0
 set background=dark
 set termguicolors
-colorscheme base16-outrun-dark
+colorscheme wildcharm
 set cursorline
 
 set colorcolumn=80,100

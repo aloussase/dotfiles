@@ -2,6 +2,21 @@
   "coc.preferences.formatOnSave": true,
   "solargraph.formatting": true,
   "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    },
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],

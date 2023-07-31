@@ -1,4 +1,4 @@
-packages := vim fish
+packages := vim fish kitty
 
 all: install
 

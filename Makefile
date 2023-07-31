@@ -1,4 +1,4 @@
-packages := vim
+packages := vim fish
 
 all: install
 

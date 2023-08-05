@@ -61,21 +61,22 @@ return {
 
       require("plugins.lsp.lua").ensure_installed().setup()
       require("plugins.lsp.haskell").ensure_installed().setup()
+      require("plugins.lsp.cpp").ensure_installed().setup()
     end
   },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {
-      height = 5,
-      auto_open = true,
-      auto_close = true,
-      use_diagnostics_signs = true
-    },
     config = function()
       local trouble = require("trouble")
       vim.keymap.set('n', '[d', function() trouble.previous({ skip_groups = false, jump = true }) end)
       vim.keymap.set('n', ']d', function() trouble.next({ skip_groups = false, jump = true }) end)
+      trouble.setup({
+        height = 5,
+        auto_open = true,
+        auto_close = true,
+        use_diagnostics_signs = true
+      })
     end
   },
 }

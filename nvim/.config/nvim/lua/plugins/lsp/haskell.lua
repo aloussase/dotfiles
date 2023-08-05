@@ -1,5 +1,5 @@
 local lspconfig = require("lspconfig")
-local common = require('configs.lspconfig.common');
+local common = require('plugins.lsp.common');
 
 return {
   ensure_installed = function()

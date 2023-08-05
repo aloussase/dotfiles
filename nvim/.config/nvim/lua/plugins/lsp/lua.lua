@@ -1,5 +1,5 @@
 local lspconfig = require('lspconfig')
-local common = require("configs.lspconfig.common")
+local common = require("plugins.lsp.common")
 
 local server_path = common.language_servers_path .. "/lua-language-server"
 local server_executable = server_path .. "/bin/lua-language-server"

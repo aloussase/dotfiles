@@ -108,5 +108,13 @@ require("lazy").setup({
     config = function()
       require('configs.telescope')
     end
+  },
+  {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup({
+        current_line_blame = true
+      })
+    end,
   }
 })

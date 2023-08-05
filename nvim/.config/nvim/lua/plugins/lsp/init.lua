@@ -62,6 +62,7 @@ return {
       require("plugins.lsp.lua").ensure_installed().setup()
       require("plugins.lsp.haskell").ensure_installed().setup()
       require("plugins.lsp.cpp").ensure_installed().setup()
+      require("plugins.lsp.rust").ensure_installed().setup()
     end
   },
   {

@@ -10,6 +10,7 @@ local function new_attach_callback()
 
   o.build = function()
     return function(client, bufnr)
+      require("fidget").setup({})
       for _, ext in ipairs(o) do
         ext(client, bufnr)
       end

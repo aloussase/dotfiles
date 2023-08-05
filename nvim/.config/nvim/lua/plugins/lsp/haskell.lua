@@ -27,6 +27,7 @@ return {
     return {
       setup = function()
         lspconfig.hls.setup({
+          on_attach = common.attach().with_virtual_types().build(),
           capabilities = common.capabilities,
           filetypes = { "haskell", "cabal" },
           settings = {

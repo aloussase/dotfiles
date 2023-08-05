@@ -1,6 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    dependencies = { 'jubnzv/virtual-types.nvim' },
     config = function()
       local common = require("plugins.lsp.common")
 

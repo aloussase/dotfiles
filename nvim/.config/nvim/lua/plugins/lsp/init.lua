@@ -1,7 +1,14 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    dependencies = { 'jubnzv/virtual-types.nvim' },
+    dependencies = {
+      'jubnzv/virtual-types.nvim',
+      {
+        "j-hui/fidget.nvim",
+        tag = "legacy",
+        event = "LspAttach",
+      }
+    },
     config = function()
       local common = require("plugins.lsp.common")
 

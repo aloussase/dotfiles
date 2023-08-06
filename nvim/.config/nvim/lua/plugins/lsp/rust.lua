@@ -7,7 +7,7 @@ return {
     if vim.fn.executable(rust_analyzer_executable) ~= 1 then
       vim.notify(
         string.format("%s not found in $PATH", rust_analyzer_executable),
-        vim.log.levels.ERROR
+        vim.log.levels.WARN
       )
     end
     return {

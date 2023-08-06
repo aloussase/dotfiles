@@ -1,23 +1,14 @@
 local lspconfig = require('lspconfig')
 local common = require("plugins.lsp.common")
 
-local server_path = common.language_servers_path .. "/lua-language-server"
-local server_executable = server_path .. "/bin/lua-language-server"
-
 return {
   ensure_installed = function()
-    local archive = "lua-language-server-3.6.25-linux-x64.tar.gz"
-    local gh_release = "https://github.com/LuaLS/lua-language-server/releases/download/3.6.25/" .. archive
-    local archive_download_path = "/tmp/" .. archive
-    if not vim.loop.fs_stat(server_path) then
-      vim.notify("Installing lua-language-server...")
-      vim.fn.mkdir(server_path, "p")
-      vim.fn.system({ "wget", gh_release, "-O", archive_download_path })
-      vim.fn.system({ "tar", "xzvf", archive_download_path, "--directory", server_path })
-      vim.notify(string.format(
-        'lua-language-server installed, make sure %s is in your $PATH',
-        server_executable
-      ))
+    local lua_ls_executable = "lua-language-server"
+    if vim.fn.executable(lua_ls_executable) ~= 1 then
+      vim.notify(
+        string.format("%s is not found in $PATH", lua_ls_executable),
+        vim.log.levels.WARN
+      )
     end
     return {
       setup = function()

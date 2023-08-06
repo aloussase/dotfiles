@@ -9,19 +9,19 @@ return {
     if vim.fn.executable(hls_executable_name) ~= 1 then
       vim.notify(
         string.format("%s not found in $PATH", hls_executable_name),
-        vim.log.levels.ERROR
+        vim.log.levels.WARN
       )
     end
     if vim.fn.executable(cabalfmt_executable_name) ~= 1 then
       vim.notify(
         string.format("%s not found in $PATH", cabalfmt_executable_name),
-        vim.log.levels.ERROR
+        vim.log.levels.WARN
       )
     end
     if vim.fn.executable(stylish_haskell_executable_name) ~= 1 then
       vim.notify(
         string.format("%s not found in $PATH", stylish_haskell_executable_name),
-        vim.log.levels.ERROR
+        vim.log.levels.WARN
       )
     end
     return {

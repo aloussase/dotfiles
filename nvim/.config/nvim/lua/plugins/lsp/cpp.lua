@@ -6,8 +6,8 @@ return {
     local ccls_executable = "ccls"
     if vim.fn.executable(ccls_executable) ~= 1 then
       vim.notify(
-        string.format("%s not found in $PATH"),
-        vim.log.levels.ERROR
+        string.format("%s not found in $PATH", ccls_executable),
+        vim.log.levels.WARN
       )
     end
     return {

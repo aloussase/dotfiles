@@ -18,7 +18,7 @@ return {
         group = vim.api.nvim_create_augroup('UserLspConfig', {}),
         callback = function(ev)
           -- Omnicompletion
-          vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+          -- vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
           -- Commands
           vim.api.nvim_buf_create_user_command(

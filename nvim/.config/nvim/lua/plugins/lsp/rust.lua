@@ -15,7 +15,6 @@ return {
         lspconfig.rust_analyzer.setup({
           on_attach = common
               .attach()
-              .with_virtual_types()
               .with_signature_help()
               .build(),
         })

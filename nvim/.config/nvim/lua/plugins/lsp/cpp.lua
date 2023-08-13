@@ -16,7 +16,6 @@ return {
           on_attach =
               common
               .attach()
-              .with_virtual_types()
               .with_signature_help()
               .build(),
           capabilities = common.capabilities,

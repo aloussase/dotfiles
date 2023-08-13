@@ -16,7 +16,7 @@ return {
   {
     'brenoprata10/nvim-highlight-colors',
     opts = {
-      render = "first_column",
+      render = "background",
       enable_tailwind = true,
     },
   },

@@ -12,5 +12,12 @@ return {
         titlebar = "",
       }
     }
-  }
+  },
+  {
+    'brenoprata10/nvim-highlight-colors',
+    opts = {
+      render = "first_column",
+      enable_tailwind = true,
+    },
+  },
 }

@@ -1,0 +1,5 @@
+configuration {
+    modi: "window,drun";
+    font: "Hasklug Nerd Font Mono"
+}
+@theme "solarized"

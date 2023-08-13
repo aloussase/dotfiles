@@ -20,4 +20,15 @@ return {
       enable_tailwind = true,
     },
   },
+  {
+    'rcarriga/nvim-notify',
+    config = function()
+      local notify = require('notify')
+      notify.setup({
+        render = "compact",
+        timeout = 1000,
+      })
+      vim.notify = notify
+    end
+  }
 }

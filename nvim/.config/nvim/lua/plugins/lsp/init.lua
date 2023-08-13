@@ -3,6 +3,7 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
       'jubnzv/virtual-types.nvim',
+       'ray-x/lsp_signature.nvim',
       {
         "j-hui/fidget.nvim",
         tag = "legacy",

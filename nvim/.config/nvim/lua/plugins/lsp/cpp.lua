@@ -17,6 +17,7 @@ return {
               common
               .attach()
               .with_virtual_types()
+              .with_signature_help()
               .build(),
           capabilities = common.capabilities,
         })

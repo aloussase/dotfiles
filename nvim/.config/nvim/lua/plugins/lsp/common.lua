@@ -8,6 +8,15 @@ local function new_attach_callback()
     return o
   end
 
+  o.with_signature_help = function()
+    o[#o + 1] = function(_, bufnr)
+      require('lsp_signature').on_attach({
+        hint_prefix = ""
+      }, bufnr)
+    end
+    return o
+  end
+
   o.build = function()
     return function(client, bufnr)
       require("fidget").setup({})

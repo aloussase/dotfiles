@@ -3,7 +3,7 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
       'jubnzv/virtual-types.nvim',
-       'ray-x/lsp_signature.nvim',
+      'ray-x/lsp_signature.nvim',
       {
         "j-hui/fidget.nvim",
         tag = "legacy",
@@ -28,6 +28,15 @@ return {
             function() vim.lsp.buf.format { async = true } end,
             { desc = "Format the current buffer" }
           )
+
+          -- Autocmds
+          vim.api.nvim_create_autocmd('BufWritePre', {
+            buffer = ev.buf,
+            desc = "Format buffer on save",
+            callback = function()
+              vim.lsp.buf.format({ async = false })
+            end
+          })
 
           -- Diganostics
           --

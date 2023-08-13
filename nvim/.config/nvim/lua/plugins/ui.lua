@@ -30,5 +30,17 @@ return {
       })
       vim.notify = notify
     end
+  },
+  {
+    'HiPhish/rainbow-delimiters.nvim',
+    config = function()
+      require('rainbow-delimiters.setup')({})
+    end
+  },
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    config = function()
+      require('indent_blankline').setup({})
+    end
   }
 }

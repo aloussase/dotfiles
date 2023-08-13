@@ -1,8 +1,8 @@
 function fish_prompt
     set -l __last_command_exit_status $status
 
-    if not set -q -g __fish_arrow_functions_defined
-        set -g __fish_arrow_functions_defined
+    if not set -q -g __fish_robbyrussell_functions_defined
+        set -g __fish_robbyrussell_functions_defined
         function _git_branch_name
             set -l branch (git symbolic-ref --quiet HEAD 2>/dev/null)
             if set -q branch[1]
@@ -13,8 +13,7 @@ function fish_prompt
         end
 
         function _is_git_dirty
-            not command git diff-index --cached --quiet HEAD -- &>/dev/null
-            or not command git diff --no-ext-diff --quiet --exit-code &>/dev/null
+            echo (git status -s --ignore-submodules=dirty 2>/dev/null)
         end
 
         function _is_git_repo
@@ -28,8 +27,7 @@ function fish_prompt
         end
 
         function _is_hg_dirty
-            set -l stat (hg status -mard 2>/dev/null)
-            test -n "$stat"
+            echo (hg status -mard 2>/dev/null)
         end
 
         function _is_hg_repo
@@ -46,10 +44,10 @@ function fish_prompt
 
         function _repo_type
             if _is_hg_repo
-                echo hg
+                echo 'hg'
                 return 0
             else if _is_git_repo
-                echo git
+                echo 'git'
                 return 0
             end
             return 1
@@ -69,18 +67,18 @@ function fish_prompt
     end
 
     set -l arrow "$arrow_color➜ "
-    if fish_is_root_user
+    if test "$USER" = 'root'
         set arrow "$arrow_color# "
     end
 
     set -l cwd $cyan(basename (prompt_pwd))
 
-    set -l repo_info
     if set -l repo_type (_repo_type)
         set -l repo_branch $red(_repo_branch_name $repo_type)
         set repo_info "$blue $repo_type:($repo_branch$blue)"
 
-        if _is_repo_dirty $repo_type
+        set -l dirty (_is_repo_dirty $repo_type)
+        if test -n "$dirty"
             set -l dirty "$yellow ✗"
             set repo_info "$repo_info$dirty"
         end

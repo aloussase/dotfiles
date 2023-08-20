@@ -1,8 +1,9 @@
 return {
+  { "olimorris/onedarkpro.nvim" },
   {
-    "olimorris/onedarkpro.nvim",
+    'Shatur/neovim-ayu',
     config = function()
-      vim.cmd("colorscheme onedark_dark")
+      require('ayu').colorscheme()
     end
-  },
+  }
 }

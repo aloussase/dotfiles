@@ -44,3 +44,5 @@ vim.opt.guifont       = "Hasklug Nerd Font Mono 12"
 vim.opt.wrap          = false
 vim.opt.viewdir       = "/tmp/view/"
 vim.opt.inccommand    = "nosplit"
+
+vim.opt.updatetime    = 1000

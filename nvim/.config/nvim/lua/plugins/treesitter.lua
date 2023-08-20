@@ -5,7 +5,6 @@ return {
       'nvim-treesitter/playground',
       'RRethy/nvim-treesitter-endwise',
       'windwp/nvim-ts-autotag',
-      'abecodes/tabout.nvim',
     },
     config = function()
       require('nvim-treesitter.configs').setup({
@@ -24,8 +23,6 @@ return {
           enable_close_on_slash = true,
         }
       })
-
-      require('tabout').setup({})
     end,
   },
 }

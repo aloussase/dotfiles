@@ -37,7 +37,7 @@
   :init (load-theme 'doom-ayu-dark t))
 
 ;;; Modeline
-(use-package all-the-icons 
+(use-package all-the-icons
   :ensure t)
 
 (use-package doom-modeline
@@ -51,27 +51,80 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;;; Font configuration
-(set-face-attribute 'default nil :font "Hasklug Nerd Font Mono" :height 120)
+(use-package emacs
+  :init
+  (set-face-attribute 'default nil :font "Hasklug Nerd Font Mono" :height 120))
+
 (use-package ligature
-  :ensure t 
+  :ensure t
   :config
   (ligature-set-ligatures 't '(">>="))
   (global-ligature-mode t))
 
-;;; Keybingings
-(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+;;; Whitespace
+(use-package whitespace
+  :hook ((before-save . untabify)
+         (before-save . delete-trailing-whitespace))
+  :init
+  (setq-default indent-tabs-mode nil)
+  (setq whitespace-style '(face trailing tabs newline newline-mark))
+  (global-whitespace-mode 1))
+
+;;; Keybingings & Editing
+(use-package emacs
+  :bind (("<escape>" . keyboard-escape-quit))
+  :config (electric-pair-mode 1))
 
 (use-package evil
   :ensure t
-  :init
-  (setq evil-want-integration t)
-  (setq evil-want-keybinding nil)
-  (setq evil-want-C-u-scroll t)
-  (setq evil-want-C-i-jump nil)
-  :config
-  (evil-mode t))
+  :init (setq evil-want-integration t
+              evil-want-keybinding nil
+              evil-want-C-u-scroll t
+              evil-want-C-i-jump nil
+              evil-undo-system 'undo-redo)
+  :config (evil-mode t))
 
-;;; Editing
+(use-package evil-leader
+  :ensure t
+  :config
+  (global-evil-leader-mode))
+
 (use-package rainbow-delimiters
   :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
+
+(use-package string-inflection
+  :ensure t)
+
+;;; Completion
+(use-package company
+  :ensure t
+  :hook (after-init . global-company-mode))
+
+;;; Minibuffer
+(use-package vertico
+  :ensure t
+  :init (vertico-mode))
+
+(use-package orderless
+  :ensure t
+  :init
+  (setq completion-styles '(orderless basic)))
+
+;;; Fuzzy finding
+(use-package consult
+  :ensure t
+  ;; :init (setq consult-preview-key nil)
+  :config
+  (evil-leader/set-key
+    "f b" #'consult-buffer
+    "f g" #'consult-ripgrep
+    "f f" #'consult-find
+    "f e" #'consult-compile-error
+    "f d" #'consult-flymake
+    "f c" #'consult-theme))
+
+;;; Git
+(use-package diff-hl
+  :ensure t
+  :init (global-diff-hl-mode))

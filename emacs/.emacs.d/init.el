@@ -99,6 +99,8 @@
 ;;; Completion
 (use-package company
   :ensure t
+  :init
+  (setq company-tooltip-align-annotations t)
   :hook (after-init . global-company-mode))
 
 ;;; Minibuffer

@@ -1,4 +1,4 @@
-packages := fish kitty nvim rofi emacs
+packages := fish kitty nvim rofi emacs R
 
 all: install
 

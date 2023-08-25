@@ -130,3 +130,10 @@
 (use-package diff-hl
   :ensure t
   :init (global-diff-hl-mode))
+
+;;; Other packages
+(add-to-list
+ 'load-path
+ (concat user-emacs-directory "lisp"))
+
+(require 'elm)

@@ -44,9 +44,13 @@
   :ensure t
   :init (doom-modeline-mode 1))
 
+(use-package nyan-mode
+  :ensure t
+  :config (nyan-mode 1))
+
 ;;; Frame transparency
-(set-frame-parameter (selected-frame) 'alpha 0.9)
-(add-to-list 'default-frame-alist `(alpha . ,0.9))
+(set-frame-parameter (selected-frame) 'alpha 0.95)
+(add-to-list 'default-frame-alist `(alpha . ,0.95))
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -58,7 +62,7 @@
 (use-package ligature
   :ensure t
   :config
-  (ligature-set-ligatures 't '(">>="))
+  (ligature-set-ligatures 't '(">>=" "->"))
   (global-ligature-mode t))
 
 ;;; Whitespace
@@ -137,3 +141,4 @@
  (concat user-emacs-directory "lisp"))
 
 (require 'elm)
+(require 'cxx)

@@ -3,4 +3,4 @@ setlocal tabstop=2
 setlocal softtabstop=2
 
 let b:ale_linters = ['tsserver']
-let b:ale_fixers = ['prettier']
+let b:ale_fixers  = ['prettier']

@@ -8,7 +8,15 @@ return {
     },
     config = function()
       require('nvim-treesitter.configs').setup({
-        ensure_installed = { "haskell", "lua", "cpp", "rust" },
+        ensure_installed = {
+          "haskell",
+          "lua",
+          "cpp",
+          "rust",
+          "javascript",
+          "typescript",
+          "vue" 
+        },
         highlight = { enable = true },
         playground = { enable = true },
         query_linter = {

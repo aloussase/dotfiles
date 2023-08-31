@@ -1,0 +1,14 @@
+{
+  "sumneko-lua.enableNvimLuaDev": true,
+  "Lua.diagnostics.globals": ["vim"],
+  "vue.inlayHints.missingProps": true,
+  "codeLens.enable": true,
+  "colors.enable": true,
+  "diagnostic.virtualText": true,
+  "inlayHint.enable": true,
+  "inlayHint.display": true,
+  "semanticTokens.enable": true,
+  "suggest.noselect": true,
+  "suggest.virtualText": true,
+  "coc.preferences.formatOnSave": true
+}

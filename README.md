@@ -1,5 +1,6 @@
 # dotfiles
-My based dotfiles
+
+![nvim](./assets/nvim.png)
 
 ## Contents
 
@@ -30,4 +31,5 @@ curl https://raw.githubusercontent.com/aloussase/dotfiles/master/scripts/install
 ```
 
 ## License
+
 MIT

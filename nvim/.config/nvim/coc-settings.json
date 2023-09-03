@@ -2,13 +2,31 @@
   "sumneko-lua.enableNvimLuaDev": true,
   "Lua.diagnostics.globals": ["vim"],
   "vue.inlayHints.missingProps": true,
-  "codeLens.enable": true,
   "colors.enable": true,
   "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
   "inlayHint.enable": true,
   "inlayHint.display": true,
   "semanticTokens.enable": true,
   "suggest.noselect": true,
   "suggest.virtualText": true,
-  "coc.preferences.formatOnSave": true
+  "coc.preferences.formatOnSave": true,
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    }
+  }
 }

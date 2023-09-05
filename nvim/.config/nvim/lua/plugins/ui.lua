@@ -32,33 +32,10 @@ return {
     end
   },
   {
-    'HiPhish/rainbow-delimiters.nvim',
-    config = function()
-      local rainbow_delimiters = require("rainbow-delimiters")
-      require('rainbow-delimiters.setup')({
-        strategy = { [''] = rainbow_delimiters.strategy['global'], },
-        query = { [''] = 'rainbow-delimiters' },
-        highlight = {
-          'RainbowDelimiterRed',
-          'RainbowDelimiterYellow',
-          'RainbowDelimiterBlue',
-          'RainbowDelimiterOrange',
-          'RainbowDelimiterGreen',
-          'RainbowDelimiterViolet',
-          'RainbowDelimiterCyan',
-        }
-      })
-    end
-  },
-  {
     'lukas-reineke/indent-blankline.nvim',
     config = function()
       require('indent_blankline').setup({})
     end
-  },
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
   },
   {
     "itchyny/lightline.vim",

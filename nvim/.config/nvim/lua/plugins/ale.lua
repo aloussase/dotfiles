@@ -1,6 +1,7 @@
 return {
   {
     'dense-analysis/ale',
+    lazy = true,
     config = function()
       -- Linting
       vim.g.ale_linters_explicit           = 1

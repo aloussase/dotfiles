@@ -6,6 +6,9 @@ function fish_mode_prompt; end
 set fish_cursor_default block blink
 set fish_cursor_insert line blink
 
+# Node
+nvm use latest >/dev/null
+
 # Haskell
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 set -gx PATH $HOME/.cabal/bin /home/aloussase/.ghcup/bin $PATH

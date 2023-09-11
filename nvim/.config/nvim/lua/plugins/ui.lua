@@ -41,7 +41,7 @@ return {
     "itchyny/lightline.vim",
     dependencies = { 'itchyny/vim-gitbranch' },
     config = function()
-      vim.opt.laststatus = 2
+      vim.opt.laststatus = 3
 
       local fg = "#B3B1AD"
       local bg = "#0A0E14"

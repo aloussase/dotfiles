@@ -15,7 +15,7 @@ return {
           "rust",
           "javascript",
           "typescript",
-          "vue" 
+          "vue"
         },
         highlight = { enable = true },
         playground = { enable = true },
@@ -31,6 +31,10 @@ return {
           enable_close_on_slash = true,
         }
       })
+
+      vim.opt.foldmethod = "expr"
+      vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+      vim.opt.foldenable = false
     end,
   },
 }

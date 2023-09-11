@@ -12,6 +12,14 @@
   "suggest.virtualText": true,
   "coc.preferences.formatOnSave": true,
   "languageserver": {
+    "typst": {
+      "command": "typst-lsp",
+      "filetypes": ["typst"]
+    },
+    "zls": {
+      "command": "zls",
+      "filetypes": ["zig"]
+    },
     "ccls": {
       "command": "ccls",
       "filetypes": ["c", "cpp", "objc", "objcpp"],

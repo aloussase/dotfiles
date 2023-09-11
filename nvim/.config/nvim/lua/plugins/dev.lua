@@ -6,5 +6,7 @@ return {
         auto_highlight = true,
       })
     end
-  }
+  },
+  { dir = "~/Code/dockerlint.nvim" },
+  { dir = "~/Code/gaya-lang/editors/vim" }
 }

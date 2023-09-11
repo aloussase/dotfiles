@@ -9,7 +9,7 @@ vim.opt.shiftwidth    = 4
 vim.opt.shiftround    = true
 vim.opt.expandtab     = true
 
-vim.opt.laststatus    = 0
+vim.opt.laststatus    = 3
 vim.opt.background    = "dark"
 vim.opt.termguicolors = true
 vim.opt.cursorline    = true

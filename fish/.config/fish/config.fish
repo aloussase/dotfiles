@@ -16,3 +16,6 @@ set -gx PATH $HOME/.cabal/bin /home/aloussase/.ghcup/bin $PATH
 # Deno
 set DENO_INSTALL $HOME/.deno
 set -gx PATH $DENO_INSTALL/bin:$PATH $PATH
+
+# Ruby
+rvm default

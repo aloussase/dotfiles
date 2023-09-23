@@ -71,7 +71,7 @@ return {
       vim.g.lightline = {
         separator = { left = '', right = '' },
         subseparator = { left = '', right = '' },
-        colorscheme = "ayu_dark",
+        colorscheme = "ayu_light",
         active = {
           left = {
             { 'mode' },

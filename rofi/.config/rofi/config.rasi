@@ -9,16 +9,16 @@ configuration {
 
 @theme "/dev/null"
 * {
-  bg: #000000;
-  bg-alt: #333333;
-  bg-selected: #31324466;
+  bg: #fff;
+  bg-alt: #f4f4f4;
+  bg-selected: #f3f3f3;
 
-  fg: #cdd6f4;
+  fg: #000;
   fg-alt: #7f849c;
   
   border: 0;
   margin: 0;
-  padding: 0;
+  padding: 1;
   spacing: 0;
 }
 

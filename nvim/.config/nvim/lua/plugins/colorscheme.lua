@@ -1,9 +1,12 @@
 return {
   { "olimorris/onedarkpro.nvim" },
+  { 'Shatur/neovim-ayu' },
+  { 'ramojus/mellifluous.nvim' },
   {
-    'Shatur/neovim-ayu',
+    'yorickpeterse/nvim-grey',
     config = function()
-      require('ayu').colorscheme()
+      vim.opt.background = "light"
+      vim.cmd("colorscheme grey")
     end
   }
 }

@@ -1,7 +1,5 @@
 return {
-  { "olimorris/onedarkpro.nvim" },
-  { 'Shatur/neovim-ayu' },
-  { 'ramojus/mellifluous.nvim' },
+  { 'projekt0n/github-nvim-theme' },
   {
     'yorickpeterse/nvim-grey',
     config = function()

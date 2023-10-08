@@ -19,6 +19,7 @@ return {
         '@yaegassy/coc-tailwindcss3',
         'coc-tsserver',
         '@yaegassy/coc-volar',
+        'coc-flutter'
       }
 
       function _G.check_back_space()

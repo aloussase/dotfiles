@@ -32,17 +32,6 @@ return {
     end
   },
   {
-    'lukas-reineke/indent-blankline.nvim',
-    config = function()
-      vim.cmd [[highlight IdentBlankLineIndent1 guifg=#dddddd gui=nocombine]]
-      require('indent_blankline').setup({
-        char_highlight_list = {
-          "IdentBlankLineIndent1"
-        }
-      })
-    end
-  },
-  {
     "itchyny/lightline.vim",
     dependencies = { 'itchyny/vim-gitbranch' },
     config = function()

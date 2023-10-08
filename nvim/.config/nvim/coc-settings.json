@@ -20,6 +20,10 @@
       "command": "zls",
       "filetypes": ["zig"]
     },
+    "lean": {
+      "command": "lake serve",
+      "filetypes": ["lean"]
+    },
     "ccls": {
       "command": "ccls",
       "filetypes": ["c", "cpp", "objc", "objcpp"],

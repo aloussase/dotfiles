@@ -12,6 +12,13 @@
   "suggest.virtualText": true,
   "coc.preferences.formatOnSave": true,
   "languageserver": {
+    "rescript": {
+      "enable": true,
+      "module": "~/.local/share/nvim/lazy/vim-rescript/server/out/server.js",
+      "args": ["--node-ipc"],
+      "filetypes": ["rescript"],
+      "rootPatterns": ["bsconfig.json"]
+    },
     "typst": {
       "command": "typst-lsp",
       "filetypes": ["typst"]
@@ -19,10 +26,6 @@
     "zls": {
       "command": "zls",
       "filetypes": ["zig"]
-    },
-    "lean": {
-      "command": "lake serve",
-      "filetypes": ["lean"]
     },
     "ccls": {
       "command": "ccls",

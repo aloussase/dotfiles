@@ -1,4 +1,5 @@
 return {
+  { 'rescript-lang/vim-rescript' },
   {
     'neoclide/coc.nvim',
     branch = "release",
@@ -9,17 +10,18 @@ return {
       vim.opt.signcolumn          = "yes"
 
       vim.g.coc_global_extensions = {
-        'coc-json',
+        '@yaegassy/coc-tailwindcss3',
+        '@yaegassy/coc-volar',
         'coc-css',
         'coc-docker',
         'coc-emmet',
+        'coc-flutter',
+        'coc-json',
         'coc-prettier',
         'coc-stylua',
         'coc-sumneko-lua',
-        '@yaegassy/coc-tailwindcss3',
         'coc-tsserver',
-        '@yaegassy/coc-volar',
-        'coc-flutter'
+        'coc-rust-analyzer',
       }
 
       function _G.check_back_space()

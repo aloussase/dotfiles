@@ -19,3 +19,6 @@ set -gx PATH $DENO_INSTALL/bin:$PATH $PATH
 
 # Ruby
 rvm default
+
+# Lean
+source ~/.elan/env

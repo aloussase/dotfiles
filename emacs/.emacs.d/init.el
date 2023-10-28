@@ -34,7 +34,7 @@
 ;;; Colorscheme
 (use-package doom-themes
   :ensure t
-  :init (load-theme 'doom-ayu-dark t))
+  :init (load-theme 'modus-operandi t))
 
 ;;; Modeline
 (use-package all-the-icons
@@ -57,7 +57,7 @@
 ;;; Font configuration
 (use-package emacs
   :init
-  (set-face-attribute 'default nil :font "Hasklug Nerd Font Mono" :height 120))
+  (set-face-attribute 'default nil :font "Hasklug Nerd Font Mono" :height 135))
 
 (use-package ligature
   :ensure t

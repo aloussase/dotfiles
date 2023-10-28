@@ -16,12 +16,15 @@ return {
         'coc-docker',
         'coc-emmet',
         'coc-flutter',
+        'coc-java',
         'coc-json',
         'coc-prettier',
+        'coc-rust-analyzer',
+        'coc-solargraph',
+        'coc-sourcekit',
         'coc-stylua',
         'coc-sumneko-lua',
         'coc-tsserver',
-        'coc-rust-analyzer',
       }
 
       function _G.check_back_space()

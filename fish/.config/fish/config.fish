@@ -22,3 +22,6 @@ rvm default
 
 # Lean
 source ~/.elan/env
+
+# Ocaml
+source /home/aloussase/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

@@ -1,5 +1,4 @@
 return {
-  { 'projekt0n/github-nvim-theme' },
   {
     'yorickpeterse/nvim-grey',
     config = function()

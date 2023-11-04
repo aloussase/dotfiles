@@ -13,36 +13,37 @@ vim.opt.laststatus    = 3
 vim.opt.background    = "dark"
 vim.opt.termguicolors = true
 vim.opt.cursorline    = true
+vim.cmd("colorscheme wildcharm")
 
-vim.opt.colorcolumn   = "80,100"
+vim.opt.colorcolumn = "80,100"
 
-vim.opt.hlsearch      = true
-vim.opt.ignorecase    = true
-vim.opt.incsearch     = true
-vim.opt.smartcase     = true
+vim.opt.hlsearch    = true
+vim.opt.ignorecase  = true
+vim.opt.incsearch   = true
+vim.opt.smartcase   = true
 
-vim.opt.wildmenu      = true
-vim.opt.wildmode      = "longest,list,full"
+vim.opt.wildmenu    = true
+vim.opt.wildmode    = "longest,list,full"
 
-vim.opt.splitright    = true
-vim.opt.splitbelow    = true
+vim.opt.splitright  = true
+vim.opt.splitbelow  = true
 
-vim.opt.list          = true
-vim.opt.listchars     = "eol:$"
+vim.opt.list        = true
+vim.opt.listchars   = "eol:$"
 
-vim.opt.autoindent    = true
-vim.opt.smartindent   = true
+vim.opt.autoindent  = true
+vim.opt.smartindent = true
 
-vim.opt.mouse         = "a"
+vim.opt.mouse       = "a"
 -- vim.opt.visualbell
-vim.opt.signcolumn    = "yes"
+vim.opt.signcolumn  = "yes"
 
-vim.opt.hidden        = true
+vim.opt.hidden      = true
 
-vim.opt.guifont       = "Hasklug Nerd Font Mono 12"
+vim.opt.guifont     = "Hasklug Nerd Font Mono 12"
 
-vim.opt.wrap          = false
-vim.opt.viewdir       = "/tmp/view/"
-vim.opt.inccommand    = "nosplit"
+vim.opt.wrap        = false
+vim.opt.viewdir     = "/tmp/view/"
+vim.opt.inccommand  = "nosplit"
 
-vim.opt.updatetime    = 1000
+vim.opt.updatetime  = 1000

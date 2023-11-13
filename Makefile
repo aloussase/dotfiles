@@ -1,4 +1,4 @@
-packages := fish kitty nvim rofi emacs R helix wezterm redshift polybar
+packages := fish kitty nvim rofi emacs R helix wezterm redshift polybar i3
 
 all: install
 

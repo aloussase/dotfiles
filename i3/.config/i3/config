@@ -1,12 +1,10 @@
 # mod
 set $mod Mod4
 
-# startup applications
-exec --no-startup-id xrandr --output eDP-1 --primary --mode 1368x768
-exec --no-startup-id xrandr --output eDP1 --primary --mode 1368x768
-exec --no-startup-id xsetroot -cursor_name left_ptr
+# Startup applications
 exec --no-startup-id polybar --reload mybar --config=~/.config/polybar/config.ini
 exec --no-startup-id xwallpaper --zoom ~/Pictures/Haskell_BG.png
+exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id kitty
 
 # keybindings
@@ -77,6 +75,7 @@ mode "resize" {
 
 bindsym $super+r mode "resize"
 
+default_border pixel 4
 for_window [class="^.*"] border pixel 0
 
 gaps inner 6

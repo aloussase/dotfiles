@@ -4,12 +4,13 @@ set $mod Mod4
 # Startup applications
 exec --no-startup-id polybar --reload mybar --config=~/.config/polybar/config.ini
 exec --no-startup-id xwallpaper --zoom ~/Pictures/Haskell_BG.png
-exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+# exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id kitty
 
 # keybindings
 bindsym $mod+Return exec kitty
 bindsym $mod+p      exec rofi -show drun
+bindsym $mod+s      exec maim -s | xclip -sel clip -t image/png
 
 # change focus
 bindsym $mod+h focus left
@@ -21,6 +22,9 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
+
+# monitors
+bindsym $mod+ctrl+l move workspace to output right
 
 # split in horizontal orientation
 bindsym $mod+Ctrl+h split v

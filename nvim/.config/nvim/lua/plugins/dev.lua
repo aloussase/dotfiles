@@ -1,3 +1,3 @@
 return {
-  { dir = "~/Code/gaya-lang/editors/vim" }
+  { dir = "~/Code/gaya/editors/vim" }
 }

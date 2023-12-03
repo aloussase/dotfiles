@@ -12,7 +12,7 @@ vim.opt.expandtab     = true
 vim.opt.laststatus    = 3
 vim.opt.background    = "dark"
 vim.opt.termguicolors = true
-vim.cmd("colorscheme wildcharm")
+-- vim.cmd("colorscheme wildcharm")
 vim.opt.cursorline  = true
 
 vim.opt.colorcolumn = "80,100"

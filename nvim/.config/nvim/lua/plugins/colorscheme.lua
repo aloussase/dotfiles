@@ -9,10 +9,18 @@ return {
   },
   {
     'marko-cerovac/material.nvim',
-    config = function() vim.cmd("colorscheme material-darker") end
+    config = function() end
   },
   {
     'olimorris/onedarkpro.nvim',
     config = function() end
+  },
+  {
+    "Shatur/neovim-ayu",
+    config = function()
+      local ayu = require('ayu')
+      ayu.setup({ mirage = true })
+      ayu.colorscheme()
+    end
   }
 }

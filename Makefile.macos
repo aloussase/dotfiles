@@ -1,0 +1,9 @@
+PKGS := yabai skhd
+
+install: 
+	stow $(PKGS)
+
+uninstall:
+	stow -D $(PKGS)
+
+.PHONY: install uninstall

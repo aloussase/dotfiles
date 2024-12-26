@@ -1,1 +1,1 @@
-PKGS_COMMON := nvim
+PKGS_COMMON := nvim zsh

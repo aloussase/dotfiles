@@ -1,0 +1,11 @@
+include Makefile.common
+
+PKGS := $(PKGS_COMMON)
+
+install: 
+	stow $(PKGS)
+
+uninstall:
+	stow -D $(PKGS)
+
+.PHONY: install uninstall

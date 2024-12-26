@@ -1,4 +1,6 @@
-PKGS := yabai skhd
+include Makefile.common
+
+PKGS := yabai skhd $(PKGS_COMMON)
 
 install: 
 	stow $(PKGS)

@@ -1,1 +1,1 @@
-PKGS_COMMON := nvim zsh
+PKGS_COMMON := nvim zsh tmux

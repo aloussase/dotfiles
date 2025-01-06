@@ -104,6 +104,7 @@ require("lazy").setup({
         -- Language servers
 
         lspconfig.gopls.setup({})
+        lspconfig.pylsp.setup({})
 
         vim.api.nvim_create_autocmd('LspAttach', {
           callback = function(args)

@@ -1,1 +1,2 @@
-PKGS_COMMON := nvim zsh tmux
+PKGS_COMMON := nvim zsh tmux kitty
+

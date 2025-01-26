@@ -40,6 +40,9 @@ require("lazy").setup({
       end
     },
     {
+      "nbouscal/vim-stylish-haskell"
+    },
+    {
       'nvim-telescope/telescope.nvim', 
       tag = '0.1.8',
       branch = '0.1.x',
@@ -68,6 +71,12 @@ require("lazy").setup({
       priority = 1000,
       config = function()
         vim.cmd[[colorscheme modus_vivendi]]
+      end
+    },
+    {
+      'lunacookies/vim-colors-xcode',
+      config = function()
+        vim.cmd[[colorscheme xcodehc]]
       end
     },
     {

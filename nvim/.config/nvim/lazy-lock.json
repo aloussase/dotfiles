@@ -9,5 +9,7 @@
   "nvim-notify": { "branch": "master", "commit": "29b33efc802a304b1cf13ab200915d4e9e67373d" },
   "nvim-treesitter": { "branch": "master", "commit": "ac6a72a6f83218216948e898362f09029b8035dc" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
-  "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" }
+  "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
+  "vim-colors-xcode": { "branch": "master", "commit": "6d449229bf29176448bd06377689d7a8db0d1bee" },
+  "vim-stylish-haskell": { "branch": "master", "commit": "60a59fd767956c40372b5aeab2d68a0a953ebb2b" }
 }

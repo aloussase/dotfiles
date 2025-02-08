@@ -10,6 +10,7 @@ alias gs='git status'
 
 
 PATH="$PATH:$HOME/go/bin"
+PATH="$PATH:$HOME/.cabal/bin"
 export PATH
 
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" 

@@ -118,6 +118,9 @@ require("lazy").setup({
         -- npm install -g typescript typescript-language-server
         lspconfig.ts_ls.setup({})
 
+        -- brew install rust-analyzer
+        lspconfig.rust_analyzer.setup({})
+
         vim.api.nvim_create_autocmd('LspAttach', {
           callback = function(args)
             local client = vim.lsp.get_client_by_id(args.data.client_id)

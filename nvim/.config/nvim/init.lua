@@ -4,6 +4,7 @@ vim.o.signcolumn = 'yes'
 -- Splitting
 vim.o.splitbelow = true
 vim.o.splitright = true
+vim.o.wrap = false
 
 -- Indenting
 vim.o.shiftwidth = 2
@@ -100,6 +101,7 @@ require("lazy").setup({
         })
       end
     },
+    { "rhysd/vim-clang-format" },
     {
       "neovim/nvim-lspconfig",
       config = function()
@@ -122,6 +124,12 @@ require("lazy").setup({
 
         -- brew install rust-analyzer
         lspconfig.rust_analyzer.setup({})
+
+        lspconfig.ccls.setup({
+          init_options = {
+            compilationDatabaseDirectory = "build"
+          }
+        })
 
         vim.api.nvim_create_autocmd('LspAttach', {
           callback = function(args)
@@ -150,6 +158,13 @@ require("lazy").setup({
         "rcarriga/nvim-notify",
       },
       config = function() 
+        require('notify').setup({
+          timeout = 1000,
+          max_width = 40,
+          top_down = false,
+          render = "wrapped-compact",
+        })
+
         require("noice").setup({
           presets = {
             bottom_search = true,

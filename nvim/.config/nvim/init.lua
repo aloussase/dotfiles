@@ -105,22 +105,23 @@ require("lazy").setup({
     {
       "neovim/nvim-lspconfig",
       config = function()
-        -- Some mappings that LSP sets by default
-        -- grn -> rename
-        -- gra -> code action
-        -- grr -> references
-        -- gO  -> document symbol
-        -- C-S -> signature help
-
         local lspconfig = require('lspconfig')
 
         -- Language servers
 
         lspconfig.gopls.setup({})
         lspconfig.pylsp.setup({})
+        lspconfig.svelte.setup({})
 
         -- npm install -g typescript typescript-language-server
         lspconfig.ts_ls.setup({})
+
+        -- npm install -g @elm-tooling/elm-language-server
+        -- npm install -g elm elm-test elm-format
+        -- npm install -g elm-review
+        lspconfig.elmls.setup({})
+
+        lspconfig.gleam.setup({})
 
         -- brew install rust-analyzer
         lspconfig.rust_analyzer.setup({})
@@ -134,10 +135,7 @@ require("lazy").setup({
         vim.api.nvim_create_autocmd('LspAttach', {
           callback = function(args)
             local client = vim.lsp.get_client_by_id(args.data.client_id)
-            -- TODO: Check from which version is this API available
-            -- if client:supports_method('textDocument/completion') then
-            --   vim.lsp.completion.enable(true, client.id, args.buf, {autotrigger = true})
-            -- end
+
             if client:supports_method('textDocument/formatting') then
               vim.api.nvim_create_autocmd('BufWritePre', {
                 buffer = args.buf,
@@ -146,6 +144,16 @@ require("lazy").setup({
                 end,
               })
             end
+
+            vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { buffer = args.buf })
+            vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { buffer = args.buf })
+            vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
+            vim.keymap.set('n', '<leader>rr', vim.lsp.buf.references, { buffer = args.buf })
+            vim.keymap.set(
+            'n', 
+            '<leader>tih', 
+            function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, 
+            { buffer = args.buf })
           end,
         })
       end
@@ -163,16 +171,6 @@ require("lazy").setup({
           max_width = 40,
           top_down = false,
           render = "wrapped-compact",
-        })
-
-        require("noice").setup({
-          presets = {
-            bottom_search = true,
-            command_palette = true,
-            long_message_to_split = true,
-            inc_rename = false,
-            lsp_doc_border = false,
-          },
         })
       end
     }

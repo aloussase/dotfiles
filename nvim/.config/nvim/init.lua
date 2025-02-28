@@ -67,19 +67,27 @@ require("lazy").setup({
             preview = false,
           }
         })
-      end
-    },
-    {
-      "miikanissi/modus-themes.nvim", 
-      priority = 1000,
-      config = function()
-        vim.cmd[[colorscheme modus_vivendi]]
+
+        telescope.load_extension('grey')
       end
     },
     {
       'lunacookies/vim-colors-xcode',
       config = function()
         vim.cmd[[colorscheme xcodehc]]
+      end
+    },
+    {
+      'yorickpeterse/nvim-grey',
+      config = function()
+        vim.cmd[[colorscheme grey]]
+      end
+    },
+    {
+      "miikanissi/modus-themes.nvim", 
+      priority = 1000,
+      config = function()
+        vim.cmd[[colorscheme modus_operandi]]
       end
     },
     {

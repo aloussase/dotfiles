@@ -181,6 +181,7 @@ require("lazy").setup({
           render = "wrapped-compact",
         })
       end
-    }
+    },
+    { 'github/copilot.vim' }
   },
 })

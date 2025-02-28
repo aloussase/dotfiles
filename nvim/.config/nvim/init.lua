@@ -22,7 +22,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
+      { out,                            "WarningMsg" },
       { "\nPress any key to exit..." },
     }, true, {})
     vim.fn.getchar()
@@ -46,13 +46,13 @@ require("lazy").setup({
       "nbouscal/vim-stylish-haskell"
     },
     {
-      'nvim-telescope/telescope.nvim', 
+      'nvim-telescope/telescope.nvim',
       tag = '0.1.8',
       branch = '0.1.x',
-      dependencies = { 
+      dependencies = {
         'nvim-lua/plenary.nvim',
       },
-      config = function() 
+      config = function()
         local telescope = require('telescope')
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -74,20 +74,20 @@ require("lazy").setup({
     {
       'lunacookies/vim-colors-xcode',
       config = function()
-        vim.cmd[[colorscheme xcodehc]]
+        vim.cmd [[colorscheme xcodehc]]
       end
     },
     {
       'yorickpeterse/nvim-grey',
       config = function()
-        vim.cmd[[colorscheme grey]]
+        vim.cmd [[colorscheme grey]]
       end
     },
     {
-      "miikanissi/modus-themes.nvim", 
+      "miikanissi/modus-themes.nvim",
       priority = 1000,
       config = function()
-        vim.cmd[[colorscheme modus_operandi]]
+        vim.cmd [[colorscheme modus_operandi]]
       end
     },
     {
@@ -100,7 +100,7 @@ require("lazy").setup({
         })
       end
     },
-    { 
+    {
       'lewis6991/gitsigns.nvim',
       config = function()
         require('gitsigns').setup({
@@ -131,6 +131,25 @@ require("lazy").setup({
 
         lspconfig.gleam.setup({})
 
+        lspconfig.sumneko_lua.setup({
+          settings = {
+            Lua = {
+              runtime = {
+                version = 'LuaJIT',
+              },
+              diagnostics = {
+                globals = { 'vim' },
+              },
+              workspace = {
+                library = vim.api.nvim_get_runtime_file("", true),
+              },
+              telemetry = {
+                enable = false,
+              },
+            },
+          },
+        })
+
         -- brew install rust-analyzer
         lspconfig.rust_analyzer.setup({})
 
@@ -148,7 +167,7 @@ require("lazy").setup({
               vim.api.nvim_create_autocmd('BufWritePre', {
                 buffer = args.buf,
                 callback = function()
-                  vim.lsp.buf.format({bufnr = args.buf, id = client.id})
+                  vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
                 end,
               })
             end
@@ -158,10 +177,10 @@ require("lazy").setup({
             vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
             vim.keymap.set('n', '<leader>rr', vim.lsp.buf.references, { buffer = args.buf })
             vim.keymap.set(
-            'n', 
-            '<leader>tih', 
-            function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, 
-            { buffer = args.buf })
+              'n',
+              '<leader>tih',
+              function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end,
+              { buffer = args.buf })
           end,
         })
       end
@@ -173,7 +192,7 @@ require("lazy").setup({
         "MunifTanjim/nui.nvim",
         "rcarriga/nvim-notify",
       },
-      config = function() 
+      config = function()
         require('notify').setup({
           timeout = 1000,
           max_width = 40,
@@ -182,6 +201,20 @@ require("lazy").setup({
         })
       end
     },
-    { 'github/copilot.vim' }
+    { 'github/copilot.vim' },
+    {
+      "CopilotC-Nvim/CopilotChat.nvim",
+      dependencies = {
+        { "github/copilot.vim" },                       -- or zbirenbaum/copilot.lua
+        { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+      },
+      build = "make tiktoken",                          -- Only on MacOS or Linux
+      opts = {
+        window = {
+          layout = 'vertical',
+          width = 0.3,
+        }
+      },
+    }
   },
 })

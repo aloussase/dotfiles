@@ -13,6 +13,9 @@ vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.expandtab = true
 
+-- Statusline
+vim.o.laststatus = 0
+
 vim.cmd('colorscheme zaibatsu')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -74,13 +77,13 @@ require("lazy").setup({
     {
       'lunacookies/vim-colors-xcode',
       config = function()
-        vim.cmd [[colorscheme xcodehc]]
+        -- vim.cmd [[colorscheme xcodehc]]
       end
     },
     {
       'yorickpeterse/nvim-grey',
       config = function()
-        vim.cmd [[colorscheme grey]]
+        -- vim.cmd [[colorscheme grey]]
       end
     },
     {
@@ -131,7 +134,7 @@ require("lazy").setup({
 
         lspconfig.gleam.setup({})
 
-        lspconfig.sumneko_lua.setup({
+        lspconfig.lua_ls.setup({
           settings = {
             Lua = {
               runtime = {

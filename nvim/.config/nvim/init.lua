@@ -97,9 +97,10 @@ require("lazy").setup({
       'nvim-treesitter/nvim-treesitter',
       config = function()
         require('nvim-treesitter.configs').setup({
-          ensure_installed = { 'go', 'haskell', 'lua' },
+          ensure_installed = { 'go', 'haskell', 'lua', 'tsx', 'typescript' },
           auto_install = false,
           highlight = { enable = true },
+          autotag = { enable = true }
         })
       end
     },
@@ -218,6 +219,17 @@ require("lazy").setup({
           width = 0.3,
         }
       },
+    },
+    {
+      'windwp/nvim-ts-autotag',
+      config = function()
+        require('nvim-ts-autotag').setup({
+          opts = {
+            enable_close = true,
+            enable_rename = true,
+          },
+        })
+      end
     }
   },
 })

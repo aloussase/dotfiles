@@ -100,7 +100,7 @@ require("lazy").setup({
           ensure_installed = { 'go', 'haskell', 'lua', 'tsx', 'typescript' },
           auto_install = false,
           highlight = { enable = true },
-          autotag = { enable = true }
+          -- autotag = { enable = true }
         })
       end
     },
@@ -122,6 +122,8 @@ require("lazy").setup({
         -- Language servers
 
         lspconfig.gopls.setup({})
+        lspconfig.templ.setup({})
+
         lspconfig.pylsp.setup({})
         lspconfig.svelte.setup({})
 

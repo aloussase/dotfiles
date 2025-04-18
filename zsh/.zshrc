@@ -13,6 +13,7 @@ PATH="$PATH:$HOME/go/bin"
 PATH="$PATH:$HOME/.cabal/bin"
 PATH="$PATH:$HOME/Library/Python/3.9/bin"
 PATH="$PATH:$HOME/.cache/rebar3/bin"
+PATH="$PATH:/usr/local/opt/"
 export PATH
 
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" 

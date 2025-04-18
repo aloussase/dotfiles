@@ -16,6 +16,10 @@ vim.o.expandtab = true
 -- Statusline
 vim.o.laststatus = 0
 
+-- Netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.cmd('colorscheme zaibatsu')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -95,12 +99,33 @@ require("lazy").setup({
     },
     {
       'nvim-treesitter/nvim-treesitter',
+      dependencies = {
+        'nvim-tree/nvim-web-devicons'
+      },
       config = function()
         require('nvim-treesitter.configs').setup({
           ensure_installed = { 'go', 'haskell', 'lua', 'tsx', 'typescript' },
           auto_install = false,
           highlight = { enable = true },
           -- autotag = { enable = true }
+        })
+      end
+    },
+    {
+      'nvim-tree/nvim-tree.lua',
+      config = function()
+        vim.keymap.set("n", "<leader>x", "<Cmd>NvimTreeToggle<CR>", {})
+
+        require('nvim-tree').setup({
+          view = {
+            width = 30,
+            side = "right",
+          },
+          renderer = {
+            root_folder_label = false,
+            group_empty = true,
+            indent_width = 1,
+          }
         })
       end
     },
@@ -232,6 +257,6 @@ require("lazy").setup({
           },
         })
       end
-    }
+    },
   },
 })

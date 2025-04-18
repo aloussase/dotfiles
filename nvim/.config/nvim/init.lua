@@ -15,12 +15,11 @@ vim.o.expandtab = true
 
 -- Statusline
 vim.o.laststatus = 0
+vim.o.termguicolors = true
 
 -- Netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
-vim.cmd('colorscheme zaibatsu')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -39,7 +38,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  install = { colorscheme = { "zaibatsu" } },
+  install = {},
   spec = {
     {
       'ndmitchell/ghcid',
@@ -74,27 +73,12 @@ require("lazy").setup({
             preview = false,
           }
         })
-
-        telescope.load_extension('grey')
       end
     },
     {
       'lunacookies/vim-colors-xcode',
       config = function()
-        -- vim.cmd [[colorscheme xcodehc]]
-      end
-    },
-    {
-      'yorickpeterse/nvim-grey',
-      config = function()
-        -- vim.cmd [[colorscheme grey]]
-      end
-    },
-    {
-      "miikanissi/modus-themes.nvim",
-      priority = 1000,
-      config = function()
-        vim.cmd [[colorscheme modus_operandi]]
+        vim.cmd [[colorscheme xcodedarkhc]]
       end
     },
     {
@@ -233,20 +217,6 @@ require("lazy").setup({
       end
     },
     { 'github/copilot.vim' },
-    {
-      "CopilotC-Nvim/CopilotChat.nvim",
-      dependencies = {
-        { "github/copilot.vim" },                       -- or zbirenbaum/copilot.lua
-        { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-      },
-      build = "make tiktoken",                          -- Only on MacOS or Linux
-      opts = {
-        window = {
-          layout = 'vertical',
-          width = 0.3,
-        }
-      },
-    },
     {
       'windwp/nvim-ts-autotag',
       config = function()

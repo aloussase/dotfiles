@@ -26,3 +26,9 @@ export NVM_DIR="$HOME/.nvm"
 export ANDROID_HOME="$HOME"/Library/Android/sdk
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/aloussase/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/aloussase/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/aloussase/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/aloussase/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

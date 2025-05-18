@@ -16,6 +16,7 @@ vim.o.expandtab = true
 -- Statusline
 vim.o.laststatus = 0
 vim.o.termguicolors = true
+vim.cmd('colorscheme unokai')
 
 -- Netrw
 vim.g.loaded_netrw = 1
@@ -73,12 +74,6 @@ require("lazy").setup({
             preview = false,
           }
         })
-      end
-    },
-    {
-      'lunacookies/vim-colors-xcode',
-      config = function()
-        vim.cmd [[colorscheme xcodedarkhc]]
       end
     },
     {

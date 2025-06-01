@@ -16,7 +16,7 @@ vim.o.expandtab = true
 -- Statusline
 vim.o.laststatus = 0
 vim.o.termguicolors = true
-vim.cmd('colorscheme unokai')
+vim.cmd('colorscheme vim')
 
 -- Netrw
 vim.g.loaded_netrw = 1

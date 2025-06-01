@@ -14,6 +14,5 @@
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "vim-clang-format": { "branch": "master", "commit": "6b791825ff478061ad1c57b21bb1ed5a5fd0eb29" },
-  "vim-colors-xcode": { "branch": "master", "commit": "6d449229bf29176448bd06377689d7a8db0d1bee" },
   "vim-stylish-haskell": { "branch": "master", "commit": "60a59fd767956c40372b5aeab2d68a0a953ebb2b" }
 }

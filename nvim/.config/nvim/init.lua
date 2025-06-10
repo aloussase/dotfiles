@@ -16,7 +16,7 @@ vim.o.expandtab = true
 -- Statusline
 vim.o.laststatus = 0
 vim.o.termguicolors = true
-vim.cmd('colorscheme vim')
+vim.cmd('colorscheme wildcharm')
 
 -- Netrw
 vim.g.loaded_netrw = 1
@@ -223,5 +223,13 @@ require("lazy").setup({
         })
       end
     },
+    {
+      'kassio/neoterm',
+      config = function()
+        vim.g.neoterm_default_mod = 'below'
+        vim.keymap.set('n', '<leader>t', '<Cmd>Tnew<CR>', { desc = 'Toggle Neoterm' })
+      end
+    }
   },
 })
+

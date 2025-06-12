@@ -16,7 +16,7 @@ vim.o.expandtab = true
 -- Statusline
 vim.o.laststatus = 0
 vim.o.termguicolors = true
-vim.cmd('colorscheme wildcharm')
+-- vim.cmd('colorscheme grey')
 
 -- Netrw
 vim.g.loaded_netrw = 1
@@ -62,6 +62,7 @@ require("lazy").setup({
       config = function()
         local telescope = require('telescope')
         local builtin = require('telescope.builtin')
+
         vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
         vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
@@ -69,11 +70,17 @@ require("lazy").setup({
         telescope.setup({
           defaults = {
             sorting_strategy = "ascending",
-            layout_strategy = "bottom_pane",
+            -- layout_strategy = "bottom_pane",
+            layout_strategy = "grey",
+            layout_config = {
+              prompt_position = "top"
+            },
             wrap_results = true,
             preview = false,
           }
         })
+
+        telescope.load_extension('grey')
       end
     },
     {
@@ -224,12 +231,42 @@ require("lazy").setup({
       end
     },
     {
-      'kassio/neoterm',
+      'akinsho/toggleterm.nvim',
+      version = "*",
       config = function()
-        vim.g.neoterm_default_mod = 'below'
-        vim.keymap.set('n', '<leader>t', '<Cmd>Tnew<CR>', { desc = 'Toggle Neoterm' })
+        vim.keymap.set('n', '<leader>tt', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
+
+        vim.api.nvim_create_autocmd({ "TermEnter" }, {
+          pattern = "term://*toggleterm#*",
+          command = "tno <silent><leader>tt <Cmd>ToggleTerm<CR>"
+        })
+
+        function _G.set_terminal_keymaps()
+          local opts = { buffer = 0 }
+          vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+          vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
+          vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+          vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+          vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+          vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+          vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+        end
+
+        vim.api.nvim_create_autocmd({ "TermEnter" }, {
+          pattern = "term://*toggleterm#*",
+          command = "lua set_terminal_keymaps()"
+        })
+
+        require("toggleterm").setup({
+          shade_terminals = false,
+        })
+      end
+    },
+    {
+      'yorickpeterse/nvim-grey',
+      config = function()
+        vim.cmd('colo grey')
       end
     }
-  },
+  }
 })
-

@@ -223,6 +223,22 @@ require("lazy").setup({
         })
       end
     },
-  },
+    {
+      'akinsho/toggleterm.nvim', 
+      version = "*", 
+      config = function()
+        vim.keymap.set('n', '<leader>tt', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
+
+        vim.api.nvim_create_autocmd({"TermEnter"}, {
+          pattern = "term://*toggleterm#*",
+          command = "tno <silent><leader>tt <Cmd>ToggleTerm<CR>"
+        })
+
+        require("toggleterm").setup({
+          shade_terminals = false,
+        })
+      end
+    }
+  ,
 })
 

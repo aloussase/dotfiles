@@ -223,13 +223,6 @@ require("lazy").setup({
         })
       end
     },
-    {
-      'kassio/neoterm',
-      config = function()
-        vim.g.neoterm_default_mod = 'below'
-        vim.keymap.set('n', '<leader>t', '<Cmd>Tnew<CR>', { desc = 'Toggle Neoterm' })
-      end
-    }
   },
 })
 

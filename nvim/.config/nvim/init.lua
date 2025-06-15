@@ -1,4 +1,12 @@
-require("options")
+--[[
+ _   ___     _____ __  __
+| \ | \ \   / /_ _|  \/  |
+|  \| |\ \ / / | || |\/| |
+| |\  | \ V /  | || |  | |
+|_| \_|  \_/  |___|_|  |_|
+
+]]
+
 require("autocmds")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

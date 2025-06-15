@@ -22,6 +22,23 @@ return {
 
       lspconfig.gleam.setup({})
 
+      lspconfig.hls.setup({
+        filetypes = { 'haskell', 'lhaskell', 'cabal' },
+        cmd = { 'haskell-language-server-9.4.8~2.10.0.0', '--lsp' },
+        settings = {
+          haskell = {
+            formattingProvider = "stylish-haskell",
+            cabalFormattingProvider = "cabal-fmt",
+            plugin = {
+              eval = { globalOn = true },
+              ['ghcide-code-actions-imports-exports'] = { globalOn = true },
+              hlint = { globalOn = true },
+              rename = { globalOn = true },
+            }
+          },
+        },
+      })
+
       lspconfig.lua_ls.setup({
         settings = {
           Lua = {

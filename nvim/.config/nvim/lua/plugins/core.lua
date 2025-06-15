@@ -1,5 +1,17 @@
 return {
   {
+    'natecraddock/workspaces.nvim',
+    config = function()
+      require('workspaces').setup({
+        auto_open = true,
+        hooks = {
+          open = 'NvimTreeOpen'
+          ,
+        },
+      })
+    end
+  },
+  {
     'akinsho/toggleterm.nvim',
     version = "*",
     config = function()

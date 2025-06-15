@@ -16,5 +16,6 @@
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
-  "vim-stylish-haskell": { "branch": "master", "commit": "60a59fd767956c40372b5aeab2d68a0a953ebb2b" }
+  "vim-stylish-haskell": { "branch": "master", "commit": "60a59fd767956c40372b5aeab2d68a0a953ebb2b" },
+  "workspaces.nvim": { "branch": "master", "commit": "55a1eb6f5b72e07ee8333898254e113e927180ca" }
 }

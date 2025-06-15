@@ -28,6 +28,7 @@ return {
       })
 
       telescope.load_extension('grey')
+      telescope.load_extension("workspaces")
     end
   },
 }

@@ -34,6 +34,7 @@ return {
               ['ghcide-code-actions-imports-exports'] = { globalOn = true },
               hlint = { globalOn = true },
               rename = { globalOn = true },
+              semanticTokens = { globalOn = true },
             }
           },
         },
@@ -80,10 +81,18 @@ return {
             })
           end
 
+          vim.api.nvim_create_autocmd({ 'CursorHold', 'BufEnter', 'InsertLeave' }, {
+            buffer = args.buf,
+            callback = function()
+              vim.lsp.codelens.refresh({ bufnr = args.buf })
+            end
+          })
+
           vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { buffer = args.buf })
           vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { buffer = args.buf })
           vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
           vim.keymap.set('n', '<leader>rr', vim.lsp.buf.references, { buffer = args.buf })
+          vim.keymap.set('n', '<leader>cl', vim.lsp.codelens.run, { buffer = args.buf })
           vim.keymap.set(
             'n',
             '<leader>tih',

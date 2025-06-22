@@ -9,7 +9,6 @@ return {
         ensure_installed = { 'go', 'haskell', 'lua', 'tsx', 'typescript' },
         auto_install = false,
         highlight = { enable = true },
-        autotag = { enable = true }
       })
     end
   },

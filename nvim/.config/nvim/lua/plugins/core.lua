@@ -1,4 +1,5 @@
 return {
+  { "nvim-lua/plenary.nvim" },
   {
     'natecraddock/workspaces.nvim',
     config = function()

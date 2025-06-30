@@ -1,5 +1,6 @@
 return {
   { "nvim-lua/plenary.nvim" },
+  { 'echasnovski/mini.test', version = '*' },
   {
     'natecraddock/workspaces.nvim',
     config = function()

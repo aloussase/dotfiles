@@ -5,6 +5,7 @@ return {
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
+      { dir = '~/Code/telescope-find-exe.nvim/' }
     },
     config = function()
       local telescope = require('telescope')
@@ -29,6 +30,7 @@ return {
 
       telescope.load_extension('grey')
       telescope.load_extension("workspaces")
+      telescope.load_extension('find_exe')
     end
   },
 }

@@ -22,6 +22,7 @@ return {
 
       lspconfig.gleam.setup({})
 
+      --[[
       lspconfig.hls.setup({
         filetypes = { 'haskell', 'lhaskell', 'cabal' },
         cmd = { 'haskell-language-server-9.4.8~2.10.0.0', '--lsp' },
@@ -39,6 +40,7 @@ return {
           },
         },
       })
+      --]]
 
       lspconfig.lua_ls.setup({
         settings = {
